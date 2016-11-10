@@ -15,9 +15,15 @@
   <ul>
     <li ng-repeat="todo in todos">
       <input type="checkbox" ng-model="todo.completed">
-      {{todo.name}}
+      <a href="#/{{$index}}">{{todo.name}}</a>
     </li>
   </ul>
+</script>
+
+<script type="text/ng-template" id="/todoDetails.html">
+  <h1>{{ todo.name }}</h1>
+  completed: <input type="checkbox" ng-model="todo.completed">
+  note: <textarea>{{ todo.note }}</textarea>
 </script>
 
 
